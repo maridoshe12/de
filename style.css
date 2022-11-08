@@ -1,0 +1,41 @@
+<style>
+body 
+  {font-family: "calibri", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 10px;
+}
+.header{
+  background-color: #FFFFFF;
+  padding-top:10px;
+  letter-spacing:4px;
+  border:1px;
+  
+}
+</style>
+body {
+    background-color : white
+  }
+  
+  .links {
+    text-align: center
+  }
+  a {
+    color : orange
+  }
+  
+  #title1 {
+    color : green
+  }
+  
+  p {
+    color : lightgreen
+  }
+  
+  #body1 {
+    color : lightgreen
+  }
+  .image{
+    width: 600px;
+    height: 600px;
+  }

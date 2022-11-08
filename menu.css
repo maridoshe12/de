@@ -1,0 +1,709 @@
+<style>
+body 
+  {font-family: "calibri", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 10px;
+}
+.header{
+  background-color: #FFFFFF;
+  padding-top:10px;
+  letter-spacing:4px;
+  border:1px;
+  
+}
+</style>
+body{
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26.4px;
+     cursor: url(https://s5.postimg.org/yca29ijjr/Fork_cursor1.png), pointer;
+  }
+  .top_header ul li{
+    margin-right:10px;
+    text-decoration:none;
+    display:inline;
+    color:#beae64;
+    
+   }
+  .top_header ul li a{
+    text-decoration:none;
+    color:#beae64;
+   
+  }
+  .top_header ul li:nth-child(3){
+    border-right: .5px solid #beae64;
+    padding-right:5px;
+   }
+  li .fa{
+    margin-right:5px;
+  }
+  
+  .menu{
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    background:url(https://s5.postimg.org/jqnmz0c53/image.jpg);
+    background-size:cover;
+    height:100%;
+   }
+  .whitepage{
+    background:#fff;
+    position:absolute;
+    top:400px;
+    left:0;
+    z-index:3;
+    width:100%;
+   
+  }
+  .menu_text{
+    font-family: 'Kristi', 'Times New Roman', Georgia, Times,serif;
+    position:absolute;
+    top:250px;
+    left:0;
+    z-index:6;
+    width:100%;
+    text-align:center;
+    color:#fff;
+    letter-spacing:5px;
+    font-size:50px;
+   
+  }
+  .top_header{
+    background-color:rgba(0,0,0,0.7);
+    height:25px;
+    position:relative;
+    top:0px;
+    left:0px;
+    z-index: 999;
+  }
+  .overlay {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+  .navbar{
+    position:relative;
+    top:0px;
+    left: 0px;
+    z-index:999;
+    float:left;
+    width:100%;
+    background:none;
+    border:none
+  }
+  #navbar .navbar-header {
+      float: none;
+  }
+  
+  #navbar .navbar-toggle {
+    display: block;
+    margin-top: 40px;
+  }
+  .navbar-toggle:hover{
+    background:none;
+  }
+  #navbar .navbar-nav {
+      float: none !important;
+      margin: 7.5px -15px;
+  }
+  
+  #navbar .navbar-nav>li {
+      float: none;
+     text-transform: uppercase;
+  }
+  
+  /* Reposition elements affected by the sliding menu 
+  #wrapper {
+      position: relative;
+      right: 0;
+      transition: right 0.35s ease;
+  }*/
+  #navbar .navbar-collapse {
+      position: fixed;
+      top: 0;
+      right: -30%;
+      display: block;
+      width: 30%;
+      height: 100% !important;
+      /*max-height: 100%;*/
+      margin: 0;
+      background-color:rgba(0,0,0,0.7);
+      transition: right 0.35s ease;
+  }
+  
+  #navbar .navbar-collapse.collapsing {
+      transition: right 0.35s ease;
+  }
+  
+  #navbar .navbar-collapse.in {
+      right: 0;
+      
+  }
+  
+  body.menu-slider.in {
+      overflow: hidden;
+  }
+  .wrapper {
+      position: relative;
+      right: 0;
+      transition: right 0.35s ease;
+  }
+  body.menu-slider .wrapper {
+      transition: right 0.35s ease;
+  }
+  
+  body.menu-slider.in .wrapper {
+      right: 30%;
+  }
+  .navbar-default .navbar-nav>li>a {
+      color: #fff;
+  }
+  .navbar-default .navbar-nav>li>a:hover{
+      color: #beae64;
+  }
+  .navbar-default .navbar-nav>.active>a, 
+  .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+      color: #beae64;
+      background: none;
+      font-weight:700;
+   }
+  .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+    background:none !important;
+  }
+   
+  @media(max-width: 450px){
+    .top_header .status{
+      display:none;
+     }
+    li.social{
+      display:none !important;
+    }
+    .top_header ul li:nth-child(3){
+    border-right:0px;
+    padding-right:0px;
+   }
+    .footer_contents .container{
+      margin: 0px 0px 0px -15px;
+      padding:0px;
+    }
+    .top_header .container{
+      margin:0px;
+      padding:0px;
+    }
+    .navbar-brand img{
+      height:50px;
+      width:150px;
+    } 
+    .navbar-toggle{
+      margin-top:30px;
+    }
+    .navbar-toggle .icon-bar {
+      background-color: black;
+  }
+  .navbar-toggle{
+    background-color:none;
+  }
+  .navbar-nav>li>a {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      line-height: 0px;
+      margin-top:20px;
+  }
+    #navbar .navbar-collapse {
+      width:50%;
+      right:-50%;
+    }
+    #navbar .navbar-collapse.in {
+      right: -40px;
+  }
+    #navbar .navbar-toggle{
+      margin-top:25px;
+    }
+    .navbar-collapse{
+       background-color:rgba(0,0,0,0.5);
+    }
+  }
+  
+  .full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .footer{
+      height:25px; 
+      width: 100%;
+      background-color: rgba(0,0,0,.8);
+      position: fixed;
+      bottom: 0pt;
+      left: 0pt;
+      z-index:999;
+  }
+  
+  .footer_contents ul li{
+    text-decoration:none;
+    display:inline;
+    margin-right:20px;
+    
+  }
+  .footer_contents ul li a{
+    text-decoration:none;
+    color:#beae64;
+  }
+  .footer_contents span{
+    color:#beae64;
+    text-align:center;
+  }
+  
+  .fixed {
+    position:fixed; 
+    top: 0; 
+    height: 100px;
+    z-index: 999;
+    background:rgba(0,0,0,.9);
+  }
+  .first,.second{
+    margin-top:10px;
+    border-bottom:1px solid #ccc;
+    border-radius:50px;
+    border-top:1px solid #ccc;
+  }
+  .navbar-default .navbar-toggle {
+      border:0px;
+  }
+  
+  .navbar-default .navbar-toggle .icon-bar{
+      background-color: #fff;
+  }
+  
+  .navbar-toggle .icon-bar{
+    width:35px;
+    height:5px;
+  }
+  
+  
+  
+  
+  .categories{
+    height:400px;
+  }
+  .catimg{
+    background:url("http://www.varietyfoodservices.com/wp-content/uploads/photo-gallery/Variety-20.jpg");
+    height:100%;
+    border-radius:10px;
+    box-shadow:0 10px 10px 0;
+    background-size:cover;
+    position:relative;
+   }
+  .dailyimg{
+    background:url("http://a3.images.venuescms.com/image/upload/t_item_image,w_300/item_16391_20130411072427_711419.jpg");
+    height:100%;
+    border-radius:10px;
+    box-shadow:0 10px 10px 0;
+    background-size:cover;
+  }
+  .desertimg{
+    background:url("https://images5.alphacoders.com/341/341445.jpg");
+    height:100%;
+    border-radius:10px;
+    box-shadow:0 10px 10px 0;
+    background-size:cover;
+  }
+  .packimg{
+    background:url("http://www.expressregalo.com/mm5/graphics/00000001/goldilocks-food-package4.jpg");
+    height:100%;
+    border-radius:10px;
+    box-shadow:0 10px 10px 0;
+    background-size:cover;
+    background-position:center;
+  }
+  .hotimg1{
+    background:url("https://chumpage.weebly.com/uploads/1/3/5/8/13581656/7950285_orig.jpg");
+    height:100%;
+    border-radius:10px;
+    box-shadow:0 10px 10px 0;
+    background-size:cover;
+    background-position:center;
+  }
+  .hotimg2{
+    background:url("http://themarketatlarimer.com/wp-content/uploads/2015/08/HotFoodHeader.gif");
+    height:100%;
+    border-radius:10px;
+    box-shadow:0 10px 10px 0;
+    background-size:cover;
+    background-position:center;
+  }
+  .hotimg3{
+    background:url("https://dbstudentstore.weebly.com/uploads/3/1/7/7/31772119/4454691.jpg");
+    height:100%;
+    border-radius:10px;
+    box-shadow:0 10px 10px 0;
+    background-size:cover;
+    background-position:center;
+  }
+  .hotimg4{
+    background:url("http://georgesmarket.com/wp-content/uploads/2015/03/omelette_206147812.jpg");
+    height:100%;
+    border-radius:10px;
+    box-shadow:0 10px 10px 0;
+    background-size:cover;
+    background-position:center;
+  }
+  .daily{
+    height:300px;
+  }
+  .desert{
+    height:150px;
+  }
+  .package,.hotmenu{
+    height:150px;
+  }
+  
+  .hot{
+    height:100px;
+  }
+  .well{
+    margin-bottom:0px;
+    padding:5px;
+    background:none;
+    border:0px;
+    box-shadow:0px 0px 0px 0px;
+  }
+  
+  .categories ul li{
+    list-style:none;
+    font-size:20px;
+    padding:10px;
+    color:#fff;
+   }
+  .categories ul li a:hover{
+    color:#beae64;
+    font-size:24px;
+  }
+  .catlist{
+    display:none;
+  }
+  .catlistback{
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    border-radius:10px;
+  }
+  .specialmenu{
+    padding:10px 0px 30px 0px;
+    border-radius:10px;
+  }
+  .catcont:before{
+    content:'CATEGORIES';
+    background:rgba(255,255,255,0.6);
+    color:#000;
+    text-align:center;
+    padding:40px;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:10px;
+  }
+  .catcont{
+    padding:50% 0% 0% 23%;
+  }
+  
+  .dailycont:before{
+    content:'DAILY SPECIAL';
+    background:rgba(255,255,255,0.6);
+    color:#000;
+    text-align:center;
+    padding:40px;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:10px;
+  }
+  .dailycont{
+    padding:45% 0% 0% 13%;
+  }
+  .viewmore{
+    display:none;
+    padding:10px;
+  }
+  .viewbtnback{
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    padding:44% 0% 0% 34%;
+  }
+  .btn{
+    background-color:darkgreen;
+    border-radius:5px;
+    border:0px;
+    border-color:darkgreen;
+    color:white;
+  }
+  .btn:hover,.btn:focus{
+    background-color:darkgreen;
+    border-color:darkgreen;
+    color:white;
+  }
+  
+  .desertcont:before{
+    content:'DESERT FOOD';
+    background:rgba(255,255,255,0.6);
+    color:#000;
+    text-align:center;
+    padding:10px;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:10px;
+  }
+  .desertcont{
+    padding:12% 0% 0% 30%;
+  }
+  
+  .viewbtndesertback{
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    padding:12% 0% 0% 40%;
+  }
+  .viewmoredesert{
+    display:none;
+    padding:10px;
+  }
+  
+  .packcont:before{
+    content:'PACKAGES';
+    background:rgba(255,255,255,0.6);
+    color:#000;
+    text-align:center;
+    padding:10px;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:10px;
+  }
+  .packcont{
+    padding:22% 0% 0% 27%;
+  }
+  
+  .viewbtnpackback{
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    padding:20% 0% 0% 32%;
+  }
+  .viewmorepack{
+    display:none;
+    padding:10px;
+  }
+  
+  
+  .hot1cont:before{
+    content:'HOT';
+    background:rgba(255,255,255,0.6);
+    color:#000;
+    text-align:center;
+    padding:10px;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:10px;
+  }
+  .hot1cont{
+    padding:32% 0% 0% 32%;
+  }
+  
+  .viewbtnhot1back{
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    padding:30% 0% 0% 22%;
+  }
+  .viewmorehot1{
+    display:none;
+    padding:10px;
+  }
+  
+  
+  .hot2cont:before{
+    content:'SPICY';
+    background:rgba(255,255,255,0.6);
+    color:#000;
+    text-align:center;
+    padding:10px;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:10px;
+  }
+  .hot2cont{
+    padding:10% 0% 0% 37%;
+  }
+  
+  .viewbtnhot2back{
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    padding:8% 0% 0% 33%;
+  }
+  .viewmorehot2{
+    display:none;
+    padding:10px;
+  }
+  
+  .hot3cont:before{
+    content:'YUMMY';
+    background:rgba(255,255,255,0.6);
+    color:#000;
+    text-align:center;
+    padding:10px;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:10px;
+  }
+  .hot3cont{
+    padding:13% 0% 0% 32%;
+  }
+  
+  .viewbtnhot3back{
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    padding:10% 0% 0% 32%;
+  }
+  .viewmorehot3{
+    display:none;
+    padding:10px;
+  }
+  .hot4cont:before{
+    content:'TANGY';
+    background:rgba(255,255,255,0.6);
+    color:#000;
+    text-align:center;
+    padding:10px;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+    border-radius:10px;
+  }
+  .hot4cont{
+    padding:17% 0% 0% 25%;
+  }
+  
+  .viewbtnhot4back{
+    background:rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    border-radius:10px;
+    padding:15% 0% 0% 22%;
+  }
+  .viewmorehot4{
+    display:none;
+    padding:10px;
+  }
+  
+  
+  
+  /* Outer */
+  .popup {
+      width:100%;
+      height:100%;
+      display:none;
+      position:fixed;
+      top:0px;
+      left:0px;
+      background:rgba(0,0,0,0.75);
+  }
+   
+  /* Inner */
+  .popup-inner {
+      max-width:550px;
+      width:100%;
+      padding:20px;
+      position:absolute;
+      top:50%;
+      left:50%;
+      -webkit-transform:translate(-50%, -50%);
+      transform:translate(-50%, -50%);
+      box-shadow:0px 2px 6px rgba(0,0,0,1);
+      border-radius:3px;
+      background:rgba(255,255,255,0.7);
+  }
+   
+  /* Close Button */
+  .popup-close {
+      width:30px;
+      height:30px;
+      padding-top:4px;
+      display:inline-block;
+      position:absolute;
+      top:0px;
+      right:0px;
+      transition:ease 0.25s all;
+      -webkit-transform:translate(50%, -50%);
+      transform:translate(50%, -50%);
+      border-radius:1000px;
+      background:rgba(0,0,0,0.8);
+      font-family:Arial, Sans-Serif;
+      font-size:20px;
+      text-align:center;
+      line-height:100%;
+      color:#fff;
+  }
+   
+  .popup-close:hover {
+      -webkit-transform:translate(50%, -50%) rotate(180deg);
+      transform:translate(50%, -50%) rotate(180deg);
+      background:rgba(0,0,0,1);
+      text-decoration:none;
+  }
+  
+  
+  
+  .popup-scroll{
+    overflow-y: none;
+    max-height: 300px;
+    padding:0 1em 0 0;
+  }
+  .popup-scroll::-webkit-scrollbar {background-color:#EEE;width:10px;}
+  .popup-scroll::-webkit-scrollbar-thumb {
+    border:1px #EEE solid;border-radius:2px;background:#777;
+    -webkit-box-shadow: 0 0 8px #555 inset;box-shadow: 0 0 8px #555 inset;
+    -webkit-transition: all .3s ease-out;transition: all .3s ease-out;
+    }
+  .popup-scroll::-webkit-scrollbar-track {-webkit-box-shadow: 0 0 2px #ccc;box-shadow: 0 0 2px #ccc;} 
+  
+  
+  .whitepage a{
+    text-deoration:none;
+    color:white;
+  }
+  .whitepage a:hover{
+    text-decoration:none;
+    color:white;
+  }
+  
+  .popup ul li{
+    list-style:none;
+    text-decoration:none;
+    font-weight:300;
+    color:#000;
+    font-size:16px;
+  }
+  .popup h3{
+    color:#000;
+  }
